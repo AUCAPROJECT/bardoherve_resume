@@ -554,16 +554,113 @@ a:hover {
 
 /* About */
 .about-layout {
-  max-width: 720px;
+  max-width: 900px;
   margin-inline: auto;
   text-align: center;
 }
 
-.about-text-center {
-  color: var(--text-muted);
-  font-size: 1.05rem;
-  line-height: 1.75;
+#aboutHeading {
+  color: var(--text);
   margin-bottom: 2rem;
+}
+
+.about-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+
+.about-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.about-card:hover {
+  border-color: rgba(124, 58, 237, 0.45);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+}
+
+.about-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.about-card-badge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--accent-light);
+  background: rgba(124, 58, 237, 0.12);
+  border: 1px solid rgba(124, 58, 237, 0.25);
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+}
+
+.about-card-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+  opacity: 0.85;
+}
+
+.about-card-text {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.about-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.about-card-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.about-card-highlight {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.about-card-company {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent-light);
+}
+
+.about-card-detail {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.about-card-link {
+  display: inline-block;
+  margin-top: auto;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-light);
+  transition: color var(--transition);
+}
+
+.about-card-link:hover {
+  color: var(--accent-hover);
 }
 
 .stats-row {
@@ -604,10 +701,69 @@ a:hover {
   text-align: center;
 }
 
-.about-meta {
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+.credential-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.credential-card:hover {
+  border-color: rgba(124, 58, 237, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+}
+
+.credential-card:first-child {
+  border-left: 3px solid var(--accent);
+}
+
+.credential-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.credential-badge {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--accent-light);
+  background: rgba(124, 58, 237, 0.1);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+}
+
+.credential-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.credential-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.35;
+}
+
+.credential-subtitle {
+  font-size: 0.82rem;
   color: var(--text-muted);
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
+  line-height: 1.5;
 }
 
 /* Background timeline */
@@ -868,6 +1024,14 @@ a:hover {
     --space-section-sm: 1.5rem;
     --space-section-lg: 3rem;
     --header-offset: 4.5rem;
+  }
+
+  .about-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .credentials-grid {
+    grid-template-columns: 1fr;
   }
 
   .nav-toggle {

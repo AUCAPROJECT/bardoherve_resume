@@ -8,12 +8,62 @@ const portfolioData = {
   heroBadge: "SOFTWARE ENGINEER | FULL-STACK DEVELOPER",
   heroHeadline: "Hi, I'm Barnardo. I build things for the web.",
   resumeUrl: "#contact",
-  aboutHeading: "I'm passionate about creating digital solutions",
-  aboutText:
-    "With over 4+ years of experience in banking and fintech, I specialize in architecting clean, scalable systems — from USSD banking channels and corporate internet banking to cross-bank payment middleware. I translate complex business requirements into robust technical solutions that perform under mission-critical conditions.",
+  aboutHeading: "I build financial systems that move money safely",
+  aboutCards: [
+    {
+      id: "who-i-am",
+      badge: "WHO I AM",
+      icon: "</>",
+      text: "Full-Stack Software Engineer based in Kigali, Rwanda. I specialize in banking and fintech systems using .NET Core, Spring Boot, and React.",
+      tags: [".NET", "Java", "React"],
+    },
+    {
+      id: "how-i-work",
+      badge: "HOW I WORK",
+      icon: "⚡",
+      text: "I build software for real transactions, real accounts, and real business rules — where reliability and security are non-negotiable. I own complex problems end to end.",
+    },
+    {
+      id: "proven-delivery",
+      badge: "PROVEN DELIVERY",
+      icon: "🏦",
+      highlights: [
+        { company: "GT Bank", detail: "USSD *600#, GAPS corporate banking, API integrations" },
+        { company: "Orion", detail: "Inward & outward payment middleware" },
+      ],
+      link: { label: "View projects ↗", target: "#projects" },
+    },
+    {
+      id: "open-to-work",
+      badge: "OPEN TO WORK",
+      icon: "📍",
+      text: "Based in Kigali · Open to remote fintech and banking roles",
+    },
+  ],
   stackIntro: "Tools I use to build banking & fintech systems",
-  aboutEducation: "BSc Software Engineering — Adventist University of Central Africa",
-  aboutCertifications: "Certified Backend Developer (SOLVIT Africa) · Certified Network Essentials (Cisco)",
+  credentials: [
+    {
+      id: "education",
+      badge: "EDUCATION",
+      icon: "🎓",
+      title: "BSc Software Engineering",
+      subtitle: "Adventist University of Central Africa",
+    },
+    {
+      id: "cert-solvit",
+      badge: "CERTIFICATION",
+      icon: "🏅",
+      title: "Certified Backend Developer",
+      subtitle: "SOLVIT Africa",
+    },
+    {
+      id: "cert-cisco",
+      badge: "CERTIFICATION",
+      icon: "🏅",
+      title: "Certified Network Essentials",
+      subtitle: "Cisco",
+    },
+  ],
   stats: [
     { value: "3+", label: "Years in FinTech" },
     { value: "Banking", label: "Payment Systems Specialist" },
@@ -71,8 +121,8 @@ const portfolioData = {
     copyright: "Barnardo Ntaganira Herve | Built with vanilla JavaScript",
   },
   socialLinks: [
-    { name: "GitHub", url: "https://github.com/", icon: "GH" },
-    { name: "LinkedIn", url: "https://linkedin.com/", icon: "in" },
+    { name: "GitHub", url: "https://github.com/BARNARDOHerve", icon: "GH" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/barnardo-ntaganira-herve-66b85b239/", icon: "in" },
     { name: "Email", url: "mailto:hervebardo@gmail.com", icon: "@" },
   ],
   summary:

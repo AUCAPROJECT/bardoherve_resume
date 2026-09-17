@@ -133,16 +133,76 @@ function renderStack() {
 
 function renderAbout() {
   document.getElementById("aboutHeading").textContent = portfolioData.aboutHeading;
-  document.getElementById("aboutText").textContent = portfolioData.aboutText;
-  document.getElementById("aboutEducation").textContent = portfolioData.aboutEducation;
-  document.getElementById("aboutCertifications").textContent = portfolioData.aboutCertifications;
 
-  const container = document.getElementById("statsGrid");
+  const cardsContainer = document.getElementById("aboutCardsGrid");
+  portfolioData.aboutCards.forEach((cardData) => {
+    const card = createElement("article", "about-card");
+    card.id = cardData.id;
+
+    const header = createElement("div", "about-card-header");
+    header.appendChild(createElement("span", "about-card-badge", cardData.badge));
+    header.appendChild(createElement("span", "about-card-icon", cardData.icon));
+    card.appendChild(header);
+
+    if (cardData.text) {
+      card.appendChild(createElement("p", "about-card-text", cardData.text));
+    }
+
+    if (cardData.tags?.length) {
+      const tags = createElement("div", "about-card-tags");
+      cardData.tags.forEach((tag) => {
+        tags.appendChild(createElement("span", "skill-tag", tag));
+      });
+      card.appendChild(tags);
+    }
+
+    if (cardData.highlights?.length) {
+      const list = createElement("div", "about-card-highlights");
+      cardData.highlights.forEach((item) => {
+        const row = createElement("div", "about-card-highlight");
+        row.appendChild(createElement("span", "about-card-company", item.company));
+        row.appendChild(createElement("span", "about-card-detail", item.detail));
+        list.appendChild(row);
+      });
+      card.appendChild(list);
+    }
+
+    if (cardData.link) {
+      const link = createElement("a", "about-card-link", cardData.link.label);
+      link.href = cardData.link.target;
+      link.addEventListener("click", (e) => {
+        if (cardData.link.target.startsWith("#")) {
+          e.preventDefault();
+          document.querySelector(cardData.link.target)?.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+      card.appendChild(link);
+    }
+
+    cardsContainer.appendChild(card);
+  });
+
+  const statsContainer = document.getElementById("statsGrid");
   portfolioData.stats.forEach((stat) => {
     const card = createElement("div", "stat-card");
     card.appendChild(createElement("span", "stat-value", stat.value));
     card.appendChild(createElement("span", "stat-label", stat.label));
-    container.appendChild(card);
+    statsContainer.appendChild(card);
+  });
+
+  const credentialsContainer = document.getElementById("credentialsGrid");
+  portfolioData.credentials.forEach((cred) => {
+    const card = createElement("article", "credential-card");
+    card.id = cred.id;
+
+    const header = createElement("div", "credential-card-header");
+    header.appendChild(createElement("span", "credential-badge", cred.badge));
+    header.appendChild(createElement("span", "credential-icon", cred.icon));
+    card.appendChild(header);
+
+    card.appendChild(createElement("h3", "credential-title", cred.title));
+    card.appendChild(createElement("p", "credential-subtitle", cred.subtitle));
+    credentialsContainer.appendChild(card);
   });
 }
 
@@ -268,7 +328,7 @@ function setupScrollReveal() {
   );
 
   document.querySelectorAll(
-    ".section, .stack-group, .stat-card, .background-timeline, .hero-content, .hero-visual"
+    ".section, .stack-group, .background-timeline, .hero-content, .hero-visual"
   ).forEach((el) => {
     el.classList.add("reveal");
     observer.observe(el);
