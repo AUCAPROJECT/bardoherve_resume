@@ -4,53 +4,79 @@ const portfolioData = {
   location: "Kigali, Rwanda",
   email: "hervebardo@gmail.com",
   phone: "+250-783-500-656",
-  summary:
-    "Full-Stack Developer with over 3+ years of experience specializing in .NET Core, Spring Boot microservices, and React/TypeScript. Proven track record of architecting clean, scalable systems and translating complex requirements into seamless digital products.",
-
-  experience: [
+  firstName: "Barnardo",
+  heroBadge: "SOFTWARE ENGINEER | FULL-STACK DEVELOPER",
+  heroHeadline: "Hi, I'm Barnardo. I build things for the web.",
+  resumeUrl: "#contact",
+  aboutHeading: "I'm passionate about creating digital solutions",
+  aboutText:
+    "With over 4+ years of experience in banking and fintech, I specialize in architecting clean, scalable systems — from USSD banking channels and corporate internet banking to cross-bank payment middleware. I translate complex business requirements into robust technical solutions that perform under mission-critical conditions.",
+  stackIntro: "Tools I use to build banking & fintech systems",
+  aboutEducation: "BSc Software Engineering — Adventist University of Central Africa",
+  aboutCertifications: "Certified Backend Developer (SOLVIT Africa) · Certified Network Essentials (Cisco)",
+  stats: [
+    { value: "3+", label: "Years in FinTech" },
+    { value: "Banking", label: "Payment Systems Specialist" },
+    { value: "APIs", label: "Middleware & Integrations" },
+  ],
+  backgroundIntro:
+    "From agile training to mission-critical banking systems — the teams and domains where I've grown as an engineer.",
+  background: [
     {
       company: "Orion System and Design Ltd",
-      period: "April 2026 – Present",
-      role: "Software Engineer | C# (.NET Core) Full Stack Developer",
-      highlights: [
-        "Lead development on a financial middleware platform that manages inward and outward payment flows between partner banks.",
-        "Build and maintain high-scale .NET Core services for real-time transaction routing, settlement, and reconciliation.",
-        "Ensure mission-critical reliability and data security for cross-bank payment interoperability infrastructure.",
-      ],
+      role: "Software Engineer",
+      period: "2026 – Present",
+      focus: "Inward & outward payment middleware for partner banks",
+      projectId: "orion-payment-middleware",
     },
     {
-      company: "Guaranty Trust Bank (Rwanda) plc",
-      period: "2023 – March 2026",
-      role: "Software Engineer | Full Stack Developer",
-      highlights: [
-        "Owned the USSD *600# platform enabling customers to access accounts and execute transfers from any mobile phone.",
-        "Delivered GAPS (GTBank Automated Payment Systems), a corporate internet banking platform for business customers.",
-        "Designed and built end-to-end API integrations connecting customer systems and third-party vendor platforms to core banking.",
-        "Improved system performance and data integrity through legacy C# refactoring and SQL stored procedure optimization.",
-      ],
+      company: "Guaranty Trust Bank Rwanda",
+      role: "Full Stack Developer",
+      period: "2023 – 2026",
+      focus: "USSD *600#, corporate banking (GAPS), and API integrations",
+      projectId: "gtbank-banking-systems",
     },
     {
       company: "SOLVIT Africa",
-      period: "2022 – 2023",
       role: "Backend Developer",
-      highlights: [
-        "Built backend modules for internal platforms using Node.js and Python, from feature design through production deployment.",
-        "Containerized services with Docker to standardize environments and streamline release cycles across the team.",
-        "Supported the full software lifecycle — requirements, implementation, testing, and deployment — in an agile delivery setting.",
-        "Earned SOLVIT Africa Certified Backend Developer credential while delivering production-ready backend solutions.",
-      ],
+      period: "2022 – 2023",
+      focus: "Internal platforms with Node.js, Python, and Docker",
+      projectId: "solvit-backend-platforms",
     },
     {
-      company: "ANDELA (Rwanda)",
-      period: "2019 – 2020",
+      company: "ANDELA Rwanda",
       role: "Full-Stack Developer",
-      highlights: [
-        "Built responsive, user-centric web interfaces with JavaScript and CSS, integrated with RESTful APIs in fast-paced sprints.",
-        "Delivered frontend features in a remote-first, agile team — practicing code reviews, pair programming, and iterative delivery.",
-        "Strengthened full-stack fundamentals that became the foundation for later work in banking and fintech systems.",
-      ],
+      period: "2019 – 2020",
+      focus: "Responsive web apps and REST API integration in agile sprints",
+      projectId: "andela-fullstack-training",
     },
   ],
+  heroStack: [
+    { name: ".NET", color: "#512bd4" },
+    { name: "Java", color: "#f89820" },
+    { name: "React", color: "#61dafb" },
+    { name: "TS", color: "#3178c6" },
+    { name: "Node", color: "#68a063" },
+    { name: "Docker", color: "#2496ed" },
+    { name: "SQL", color: "#cc2927" },
+  ],
+  footer: {
+    ctaHeading: "Have a project in mind?",
+    ctaButton: "Get in Touch ↗",
+    testimonial: {
+      quote: "I combine deep technical expertise with a clear understanding of business requirements a rare quality in fintech engineering.",
+      author: "Professional Reference",
+      role: "Banking & FinTech Industry",
+    },
+    copyright: "Barnardo Ntaganira Herve | Built with vanilla JavaScript",
+  },
+  socialLinks: [
+    { name: "GitHub", url: "https://github.com/", icon: "GH" },
+    { name: "LinkedIn", url: "https://linkedin.com/", icon: "in" },
+    { name: "Email", url: "mailto:hervebardo@gmail.com", icon: "@" },
+  ],
+  summary:
+    "I’m a Full-Stack Software Engineer passionate about building secure, scalable, and reliable digital systems. I work across backend architecture, APIs, databases, and modern frontend applications using .NET Core, Spring Boot, React, and TypeScript—turning complex business problems into practical software solutions.",
 
   skills: [
     {
@@ -79,31 +105,12 @@ const portfolioData = {
     },
   ],
 
-  education: [
-    {
-      title: "Bachelor of Science in IT",
-      subtitle: "Software Engineering",
-      institution: "Adventist University of Central Africa",
-      period: "2019 – 2025",
-    },
-  ],
-
-  certifications: [
-    "Certified Backend Developer — SOLVIT Africa",
-    "Certified Network Essentials — Cisco",
-  ],
-
-  softSkills: [
-    "Problem-Solving & Critical Thinking",
-    "Communication",
-    "Teamwork & Collaboration",
-    "Adaptability & Time Management",
-  ],
-
-  blogs: [
+  projects: [
     {
       id: "gtbank-banking-systems",
-      title: "Building Mission-Critical Banking Systems at GT Bank Rwanda",
+      number: "01",
+      gradient: "linear-gradient(135deg, #1e3a5f 0%, #7c3aed 100%)",
+      title: "GT Bank Digital Banking Systems",
       company: "Guaranty Trust Bank (Rwanda) plc",
       period: "2023 – March 2026",
       excerpt:
@@ -160,7 +167,9 @@ const portfolioData = {
     },
     {
       id: "orion-payment-middleware",
-      title: "Engineering Cross-Bank Payment Flows at Orion",
+      number: "02",
+      gradient: "linear-gradient(135deg, #312e81 0%, #8b5cf6 100%)",
+      title: "Orion Payment Middleware",
       company: "Orion System and Design Ltd",
       period: "April 2026 – Present",
       excerpt:
@@ -205,7 +214,9 @@ const portfolioData = {
     },
     {
       id: "solvit-backend-platforms",
-      title: "Building Backend Foundations at SOLVIT Africa",
+      number: "03",
+      gradient: "linear-gradient(135deg, #1a2e1a 0%, #059669 100%)",
+      title: "SOLVIT Internal Platforms",
       company: "SOLVIT Africa",
       period: "2022 – 2023",
       excerpt:
@@ -251,7 +262,9 @@ const portfolioData = {
     },
     {
       id: "andela-fullstack-training",
-      title: "Launching My Full-Stack Journey at ANDELA",
+      number: "04",
+      gradient: "linear-gradient(135deg, #374151 0%, #6b7280 100%)",
+      title: "ANDELA Full-Stack Training",
       company: "ANDELA (Rwanda)",
       period: "2019 – 2020",
       excerpt:
