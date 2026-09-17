@@ -8,7 +8,7 @@ const portfolioData = {
   heroBadge: "SOFTWARE ENGINEER | FULL-STACK DEVELOPER",
   heroHeadline: "Hi, I'm Barnardo. I build things for the web.",
   resumeUrl: "#contact",
-  aboutHeading: "I build financial systems that move money safely",
+  aboutHeading: "About Me",
   aboutCards: [
     {
       id: "who-i-am",
